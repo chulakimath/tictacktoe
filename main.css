@@ -1,13 +1,16 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     width: 100%;
     height: 100%;
 }
-.cover{
+
+.cover {
     width: 100%;
     height: 100%;
     background-color: gray;
@@ -15,44 +18,46 @@ html,body{
     align-items: center;
     justify-content: center;
 }
-.main{
+
+.main {
     width: 40%;
     height: 90%;
-    background-color:aliceblue;
+    background-color: aliceblue;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
 }
-.top{
+
+.top {
     background-color: antiquewhite;
-    height: 10%;
+    height: 16%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5%;
-    justify-content: center;
+    justify-content: space-around;
 }
 .top>div{
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    gap: 80px;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    font-size: 1.5rem;
 }
-scorex{
-    font-size: 20px;
-}
-scorey{
-    font-size: 20px;
-}
-.bottom{
+
+
+.bottom {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
-    gap: 10%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5%;
     place-items: center;
     padding: 2% 0%;
     cursor: pointer;
 }
-.bottom>div{
+
+.bottom>div {
     width: 10vw;
     height: 20vh;
     border-radius: 10px;
@@ -63,40 +68,49 @@ scorey{
     justify-content: center;
     box-shadow: 0px 10px 10px gray;
 }
-#reload{
-    padding:0px 25px;
+
+#reload {
+    padding: 10px 25px;
     border: none;
     border-radius: 10px;
     background-color: aqua;
-    border:solid 1px blue;
+    border: solid 1px blue;
     box-shadow: 3px 2px 3px black;
     cursor: pointer;
+    font-size: 1.1rem;
 }
-#chance{
+
+#chance {
     font-size: 1.5rem;
     text-align: center;
 }
-@media (max-width:1024px) {
-    .main{
-        width: 90%;
-        height: 100%;
-        background-color:aliceblue;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    .bottom>div{
-        width: 25vw;
-        height: 20vh;
-        border-radius: 10px;
-        background-color: aqua;
-        font-size: 3.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+#gameover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-@media(max-width:768px) {
+#gameover1 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background-color: aqua;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    border: solid 1px blue;
+    box-shadow: 3px 2px 3px black;
+    cursor: pointer;
+}
+
+@media (max-width:1024px) {
+    .top>div{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;}
+
     .main{
         width: 90%;
         height: 90%;
@@ -104,24 +118,23 @@ scorey{
         border-radius: 10px;
         overflow: hidden;
     }
-    .bottom>div{
-        width: 15vw;
-        height: 20vh;
-        border-radius: 10px;
-        background-color: aqua;
-        font-size: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 4%;
+        place-items: center;
+        padding: 2% 0%;
+        cursor: pointer;
     }
-}
-@media (max-width:425px) {
-    .main{
+    .top>div{
+        height: 100%;
         width: 100%;
-        height: 90%;
-        background-color:aliceblue;
-        border-radius: 10px;
-        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        font-size: 2.5rem;
     }
     .bottom>div{
         width: 20vw;
@@ -133,8 +146,67 @@ scorey{
         align-items: center;
         justify-content: center;
     }
+    #reload {
+        padding: 10px 25px;
+        border: none;
+        border-radius: 10px;
+        background-color: aqua;
+        border: solid 1px blue;
+        box-shadow: 3px 2px 3px black;
+        cursor: pointer;
+        font-size: 2.5rem;
+    }
 }
-@media (max-width:320px) {
+
+@media(max-width:768px) {
+    .main{
+        width: 90%;
+        height: 90%;
+        background-color:aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 4%;
+        place-items: center;
+        padding: 2% 0%;
+        cursor: pointer;
+    }
+    .top>div{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        font-size: 2rem;
+    }
+    .bottom>div{
+        width: 20vw;
+        height: 20vh;
+        border-radius: 10px;
+        background-color: aqua;
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #reload {
+        padding: 10px 25px;
+        border: none;
+        border-radius: 10px;
+        background-color: aqua;
+        border: solid 1px blue;
+        box-shadow: 3px 2px 3px black;
+        cursor: pointer;
+        font-size: 1.55rem;
+    }
+}
+
+@media (max-width:425px) {
     .main{
         width: 100%;
         height: 100%;
@@ -152,26 +224,188 @@ scorey{
         align-items: center;
         justify-content: center;
     }
-}
+} 
 
 
-/* game over */
-#gameover{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+
+
+@media (max-width:400px) {
+    .main{
+        width: 100%;
+        height: 100%;
+        background-color:aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .top>div{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .bottom>div{
+        width: 30vw;
+        height: 20vh;
+        border-radius: 10px;
+        background-color: aqua;
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #gameover1{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-60%);
+        background-color: aqua;
+        padding:50px 25px;
+        margin-bottom: 20%;
+        border: none;
+        border-radius: 10px;
+        border:solid 1px blue;
+        box-shadow: 3px 2px 3px black;
+        cursor: pointer;
+    }
+
 }
-#gameover1{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-60%);
-    background-color: aqua;
-    padding:10px 25px;
-    border: none;
-    border-radius: 10px;
-    border:solid 1px blue;
-    box-shadow: 3px 2px 3px black;
-    cursor: pointer;
+
+@media (max-width:375px) {
+    .main {
+        width: 100%;
+        height: 100%;
+        background-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .bottom>div {
+        width: 28vw;
+        height: 18vh;
+        border-radius: 10px;
+        background-color: aqua;
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top {
+        background-color: antiquewhite;
+        height: 22%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5%;
+        justify-content: center;
+    }
+
+    .top>div {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        /* font-size: 1.5rem; */
+    }
+
+    #reload {
+        padding: 10px 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: aqua;
+        border: solid 1px blue;
+        box-shadow: 3px 2px 3px black;
+        cursor: pointer;
+    }
+
+    #gameover1 {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        background-color: aqua;
+        padding: 50px 25px;
+        margin-bottom: 20%;
+        border: none;
+        border-radius: 10px;
+        border: solid 1px blue;
+        box-shadow: 3px 2px 3px black;
+        cursor: pointer;
+    }
 }
+
+@media (max-width:320px) {
+    .main {
+        width: 100%;
+        height: 100%;
+        background-color: aliceblue;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .bottom>div {
+        width: 27vw;
+        height: 20vh;
+        border-radius: 10px;
+        background-color: aqua;
+        font-size: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .top {
+        background-color: antiquewhite;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5%;
+        justify-content: center;
+    }
+
+    .top>div {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0%;
+        font-size: 1.5rem;
+    }
+
+    #reload {
+        padding: 10px 10px;
+        border: none;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        background-color: aqua;
+        border: solid 1px blue;
+        box-shadow: 3px 2px 3px black;
+        cursor: pointer;
+    }
+
+    #gameover1 {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        background-color: aqua;
+        padding: 50px 25px;
+        margin-bottom: 20%;
+        border: none;
+        border-radius: 10px;
+        border: solid 1px blue;
+        box-shadow: 3px 2px 3px black;
+        cursor: pointer;
+    }
+
+
+
+} 
+
