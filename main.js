@@ -152,3 +152,7 @@ else if(player=="O"){
 document.querySelector("scorex").innerHTML=scorex;
 document.querySelector("scorey").innerHTML=scorey;
 }
+document.getElementById("reload").addEventListener('click',()=>{
+    window.location.href="index.html";
+})
+
