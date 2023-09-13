@@ -258,21 +258,6 @@ body {
         justify-content: center;
     }
 
-    #gameover1{
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%,-60%);
-        background-color: aqua;
-        padding:50px 25px;
-        margin-bottom: 20%;
-        border: none;
-        border-radius: 10px;
-        border:solid 1px blue;
-        box-shadow: 3px 2px 3px black;
-        cursor: pointer;
-    }
-
 }
 
 @media (max-width:375px) {
@@ -323,20 +308,6 @@ body {
         cursor: pointer;
     }
 
-    #gameover1 {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -60%);
-        background-color: aqua;
-        padding: 50px 25px;
-        margin-bottom: 20%;
-        border: none;
-        border-radius: 10px;
-        border: solid 1px blue;
-        box-shadow: 3px 2px 3px black;
-        cursor: pointer;
-    }
 }
 
 @media (max-width:320px) {
@@ -389,22 +360,6 @@ body {
         box-shadow: 3px 2px 3px black;
         cursor: pointer;
     }
-
-    #gameover1 {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -60%);
-        background-color: aqua;
-        padding: 50px 25px;
-        margin-bottom: 20%;
-        border: none;
-        border-radius: 10px;
-        border: solid 1px blue;
-        box-shadow: 3px 2px 3px black;
-        cursor: pointer;
-    }
-
 
 
 } 
