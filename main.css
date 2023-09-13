@@ -50,6 +50,7 @@ scorey{
     gap: 10%;
     place-items: center;
     padding: 2% 0%;
+    cursor: pointer;
 }
 .bottom>div{
     width: 10vw;
@@ -69,6 +70,7 @@ scorey{
     background-color: aqua;
     border:solid 1px blue;
     box-shadow: 3px 2px 3px black;
+    cursor: pointer;
 }
 #chance{
     font-size: 1.5rem;
@@ -171,4 +173,5 @@ scorey{
     border-radius: 10px;
     border:solid 1px blue;
     box-shadow: 3px 2px 3px black;
+    cursor: pointer;
 }
